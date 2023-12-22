@@ -5,4 +5,6 @@ def create_app():
     from routes import dp as main_bp
     App.register_blueprint(main_bp)
     return App
-
+app= create_app()
+if __name__== "__main__":
+    app.run(host='0.0.0.0',port=5000)
