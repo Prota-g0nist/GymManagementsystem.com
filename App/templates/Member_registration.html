@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Gym Management System</h1>
+    </header>
+    {% include "navbar.html" %}
+    <div class="container">
+        <main >
+            
+
+        <h2>Member Registration</h2>
+
+        <div class="register">
+            {% block content %}
+            <h1>Add Member</h1>
+            <form method="POST" action="{{ url_for('main.addmemberroute') }}">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            
+                <label for="membership_type">Membership Type:</label>
+                <select id="membership_type" name="membership_type" required>
+                    <option value="">Select...</option>
+                    <option value="Basic">Basic</option>
+                    <option value="Premium">Premium</option>
+                    <option value="Deluxe">Deluxe</option>
+                </select>
+            
+                <input type="submit" value="Add Member">
+            </form>
+            {% endblock %} 
+            </div>
+    </main>
+</div>
+    
+</body>
+</html>

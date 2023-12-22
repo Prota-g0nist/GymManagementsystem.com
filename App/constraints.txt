@@ -1,0 +1,4 @@
+# requirements.txt
+
+pygame==2.3.0
+PythonTurtle==0.3.2

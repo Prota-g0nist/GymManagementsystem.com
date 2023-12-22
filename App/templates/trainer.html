@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Gym Management System</h1>
+    </header>
+    {% include "navbar.html" %}
+    <div class="container"> <main >
+
+        <h2>Trainer Info</h2>
+        <div class="trainer-info">
+            <p>Meet our experienced trainers:</p>
+            <ul>
+                <li><strong>John Doe</strong> - Certified Personal Trainer</li>
+                <li><strong>Jane Smith</strong> - Yoga Instructor</li>
+                <li><strong>Mike Johnson</strong> - Strength and Conditioning Coach</li>
+                <li><strong>Sara Williams</strong> - Cardio Fitness Specialist</li>
+                <!-- Add more trainer information as needed -->
+            </ul>
+        </div>
+
+        <div class="appointment-form">
+            {% block content %}
+            <h2>Book an Appointment</h2>
+            <form method="POST" action="{{ url_for('main.appointment') }}">
+                <label for="trainer_name">Select Trainer:</label>
+                <select id="trainer_name" name="trainer_name" required>
+                    <option value="john_doe">John Doe</option>
+                    <option value="jane_smith">Jane Smith</option>
+                    <option value="mike_johnson">Mike Johnson</option>
+                    <option value="sara_williams">Sara Williams</option>
+                </select>
+                <label for="member_id">Member_id:</label>
+                <input type="integer" id="member_id" name="member_id" required>
+
+                <label for="appointment_date">Select Date:</label>
+                <input type="date" id="appointment_date" name="appointment_date" required>
+
+                <label for="appointment_time">Select Time:</label>
+                <input type="time" id="appointment_time" name="appointment_time" required>
+
+                <button type="submit" >Book Appointment</button>
+            </form>
+            {% endblock %}
+        </div>
+    </main>
+    </div>
+</body>
+</html>

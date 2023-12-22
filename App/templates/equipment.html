@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Knowledge</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Gym Management System</h1>
+    </header>
+    {% include "navbar.html" %}
+    <div class="container">
+        <main >
+
+        <h2>Equipment Knowledge</h2>
+        <div class="equipment-info">
+            <p>Explore information about our gym equipment:</p>
+            <ul>
+                <li><strong>Treadmill:</strong> Cardio equipment for running or walking.</li>
+                <li><strong>Weights:</strong> Dumbbells and barbells for strength training.</li>
+                <li><strong>Elliptical Machine:</strong> Low-impact cardio equipment.</li>
+                <li><strong>Stationary Bike:</strong> Indoor cycling for cardio workouts.</li>
+                <!-- Add more equipment information as needed -->
+            </ul>
+        </div>
+    </main>
+</div>
+</body>
+</html>

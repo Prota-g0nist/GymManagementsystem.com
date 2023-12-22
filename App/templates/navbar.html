@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>nav {
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }</style>
+</head>
+<body>
+    
+    <nav>
+        <a href="{{url_for('main.index')}}">Home</a>
+        <a href="{{url_for('main.register')}}">Member Registration</a>
+        <a href="{{url_for('main.attendance')}}">Attendance Tracking</a>
+        <a href="{{url_for('main.equipment')}}">Equipment Knowledge</a>
+        <a href="{{url_for('main.trainer')}}">Trainer Info</a>
+    </nav>
+</body>
+</html>
