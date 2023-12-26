@@ -1,0 +1,17 @@
+16.171.238.69:5000
+cd C:\Users\Dilav\Desktop\GymManagement.com
+
+ssh -i dilav-flask-1.pem ec2-user@16.171.238.69
+
+cd GYM
+
+
+cd App
+
+source venv/bin/activate
+
+nohup python app.py &
+
+to stop the app :- ps aux | grep app.py
+
+kill "ps"
